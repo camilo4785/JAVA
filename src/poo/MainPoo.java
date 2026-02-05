@@ -5,6 +5,17 @@ import java.util.Arrays;
 public class MainPoo {
 
     public static void main(String[] args) {
+
+        //inyeccion();
+
+        herencia();
+
+        //herenciaPractica();
+    }
+
+
+
+    public static void inyeccion (){
         Persona p1 = new Persona("Camilo", 23);
         p1.saludar();
         p1.setNombre("Campos");
@@ -14,7 +25,9 @@ public class MainPoo {
         Calculadora c1 = new Calculadora();
 
         System.out.println(c1.sumar(1,2));
+    }
 
+    public static void herencia () {
         Animal animal = new Animal();
         animal.hacerSonido();
 
@@ -23,5 +36,31 @@ public class MainPoo {
 
         Volador ave = new Ave();
         ave.volar();
+
+
+        Animal ave2 = new Ave();
+        ave2.hacerSonido();
+        ave2.conseguirCasa();
+    }
+
+    public static void herenciaPractica(){
+        Cliente cliente = new Cliente(
+                1L,
+                "Camilo",
+                "camilo@mail.com",
+                "Calle 123"
+        );
+
+        Admin admin = new Admin(
+                2L,
+                "Ana",
+                "ana@mail.com"
+        );
+
+        cliente.mostrarInfo();   // heredado
+        cliente.comprar();
+
+        admin.mostrarInfo();     // heredado
+        admin.eliminarUsuario();
     }
 }
