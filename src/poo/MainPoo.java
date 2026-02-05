@@ -14,5 +14,14 @@ public class MainPoo {
         Calculadora c1 = new Calculadora();
 
         System.out.println(c1.sumar(1,2));
+
+        Animal animal = new Animal();
+        animal.hacerSonido();
+
+        Animal perro = new Perro();
+        perro.hacerSonido();
+
+        Volador ave = new Ave();
+        ave.volar();
     }
 }
