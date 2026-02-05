@@ -6,4 +6,9 @@ public class Ave extends Animal implements Volador {
     public void volar(){
         System.out.println("Estoy volando");
     }
+
+    @Override
+    public void hacerSonido() {
+        System.out.println("Cucu-cucu");
+    }
 }
