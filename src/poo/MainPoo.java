@@ -23,8 +23,11 @@ public class MainPoo {
 
         //ejemploStreams();
 
-        encontrarPares();
+        //encontrarPares();
 
+        //excepciones();
+
+        miExcepcion();
 
     }
 
@@ -142,5 +145,21 @@ public class MainPoo {
 
         System.out.println(pares);
 
+    }
+
+    public static void excepciones(){
+        try {
+            int resultado = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("No se puede dividir por cero");
+        }
+    }
+
+    public static void miExcepcion(){
+        int numero = 5;
+
+                if (numero >= 4){
+                    throw new IllegalArgumentException("Mayor a 4");
+                }
     }
 }
