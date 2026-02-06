@@ -1,6 +1,7 @@
 package poo;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class MainPoo {
 
@@ -16,7 +17,14 @@ public class MainPoo {
 
         //ejemploSet();
 
-        ejemploMap();
+        //ejemploMap();
+
+        //ejemploLambda();
+
+        //ejemploStreams();
+
+        encontrarPares();
+
 
     }
 
@@ -104,5 +112,35 @@ public class MainPoo {
         usuarios.put("2", "Ana");
 
         System.out.println(usuarios.get("1"));
+    }
+
+    public static void ejemploLambda(){
+        List<String> nombres = new ArrayList<>();
+
+        nombres.add("Camilo");
+        nombres.add("Ana");
+        nombres.add("Luis");
+
+        nombres.forEach(nombre -> System.out.println(nombre));
+
+    }
+
+    public static void ejemploStreams(){
+        List<String> nombres = List.of("Camilo", "Ana", "Luis", "Pedro");
+
+        nombres.stream()
+                .filter(n -> n.startsWith("A"))
+                .forEach(System.out::println);
+    }
+
+    public static void encontrarPares(){
+        List<Integer> numeros = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+
+        List<Integer> pares = numeros.stream()
+                .filter(n -> n % 2 != 0)   // solo pares
+                .collect(Collectors.toList());
+
+        System.out.println(pares);
+
     }
 }
