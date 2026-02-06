@@ -1,6 +1,6 @@
 package poo;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class MainPoo {
 
@@ -8,9 +8,16 @@ public class MainPoo {
 
         //inyeccion();
 
-        herencia();
+        //herencia();
 
         //herenciaPractica();
+
+        //listas();
+
+        //ejemploSet();
+
+        ejemploMap();
+
     }
 
 
@@ -62,5 +69,40 @@ public class MainPoo {
 
         admin.mostrarInfo();     // heredado
         admin.eliminarUsuario();
+    }
+
+    public static void listas(){
+        List<String> nombres = new ArrayList<>();
+
+        nombres.add("Camilo");
+        nombres.add("Ana");
+        nombres.add("Luis");
+
+
+        System.out.println(nombres.get(0));
+
+        for (String nombre: nombres) {
+            System.out.println(nombre);
+        }
+    }
+
+    public static void ejemploSet(){
+
+        Set<String> correos = new HashSet<>();
+
+        correos.add("a@mail.com");
+        correos.add("a@mail.com");
+        correos.add("b@mail.com");
+
+        System.out.println(correos.size());
+    }
+
+    public static void ejemploMap(){
+        Map<String, String> usuarios = new HashMap<>();
+
+        usuarios.put("1", "Camilo");
+        usuarios.put("2", "Ana");
+
+        System.out.println(usuarios.get("1"));
     }
 }
